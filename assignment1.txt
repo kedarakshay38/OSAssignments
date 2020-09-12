@@ -96,7 +96,7 @@ Q3.
 A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and file5.txt with some text inside it. 
 Search for 's' character inside all the files using grep command. Also Use cat to view all file content together.
 	
-=>	cat > file1.txt
+->	cat > file1.txt
 	cat > file2.txt
 	cat > file3.txt
 	cat > file4.txt
@@ -144,7 +144,7 @@ Q5. Create Random some files and sub directories.
 	
 a) display files row wise, column wise, 1 per row
 	
-=>	cat > col.txt
+->	cat > col.txt
 	a
 	b
 	c
@@ -154,31 +154,31 @@ a) display files row wise, column wise, 1 per row
 	
 b) sort the files in ascending, descending order
 	
-=> sort name.txt
+-> sort name.txt
    sort -r name.txt		
 	
 c) Create some hidden files and sub directories and display them using “ls -a”
 
-=>cat > .h2.txt
+->cat > .h2.txt
   mkdir .h2
   ls -a
 
 d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
 
-=>touch -a a.txt
+->touch -a a.txt
   touch -c -d a.txt
 
 e) Recursive display contents of your home directory.
 	
-=>ls -r	
+->ls -r	
 	
 f) display all attributes of files and directories using ls -l
 	
-=>ls -l	
+->ls -l	
 	
 g) display attributes of a directory using ls -ld
 
-=>ls -ld dira
+->ls -ld dira
 
 /////////////////////////////////////////////////////////////////////----------***********----------\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -192,7 +192,7 @@ Q1. Create directory of your name and then create 4 files inside it named
 			#/bin/sh
 			ls -lh
 
-=>mkdir akash
+->mkdir akash
   cd akash
   touch a.txt b.txt c.txt d.sh
   chmod 110 a.txt b.txt
@@ -202,30 +202,30 @@ Q1. Create directory of your name and then create 4 files inside it named
 Q2. Change the permission of the previous directory to executable only.
 	Analyze the output.
 
-=> chmod 001 akash
+-> chmod 001 akash
 
 Q3. Change the permission of the previous directory to read only.
 	Analyze the output.
 
-=> chmod 100 akash
+-> chmod 100 akash
 
 Q4. Use echo to list the all files of your home directory.
 
-=> echo *
+-> echo *
 
 Q5. Use echo to list the all files of /etc/ directory
 
-=> cd /etc
+-> cd /etc
    echo *
 
 Q6. Use echo to list the all files of /etc/ directory with extension name .conf
 
-=>cd /etc
+->cd /etc
   echo *.conf
 
 Q7. Use echo to append your name to a.txt
 
-=> echo 'append successfull'>>a.txt
+-> echo 'append successfull'>>a.txt
 
 /////////////////////////////////////////////////////////////////////----------***********----------\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
