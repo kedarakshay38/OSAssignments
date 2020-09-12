@@ -1,0 +1,356 @@
+
+ASSIGNMENT NO: 1
+
+Q1. Explore the following commands with various options, refer man pages for 
+    further help:
+ a) date
+-> 	date
+	date +%a		->Mon	
+	date +%A		->Monday
+	date +%b		->Sep
+	date +%B		->September
+	date +%d		->07
+	date +%D		->09/07/2020
+	date +%F		->2020-09-07
+	date +%T		->21:06:28
+	date +%Y		->2020
+	date +"%B %d %Y"	->September 07 2020
+
+ b) cal
+ ->	cal
+	cal 2020
+	cal Jan 2020
+
+ c) bc
+ ->	bc 1.07.1
+	Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+	This is free software with ABSOLUTELY NO WARRANTY.
+	For details type `warranty'.
+
+ d) echo
+ ->	echo HELLO CDAC	
+
+	o/p->HELLO CDAC
+
+
+ f) whoami 
+ -> username
+
+ g) logname
+ ->user login name
+
+ h) uname
+ ->linux
+
+ i)seq
+ ->seq 10
+   seq 1 2 10
+   seq 1 5 20
+
+ j) clear
+ => Used to clear the screen.
+
+/////////////////////////////////////////////////////////////////////----------***********----------\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt in each directory respectively and then 
+copy c directory into the a.
+->
+mkdir dira dirb dirc 
+
+cd dira
+   cat > a.txt
+   cat > b.txt
+   cat > c.txt
+   cd ..
+   
+cd dirb
+   cat > a.txt
+   cat > b.txt
+   cat > c.txt
+    cd ..
+   
+cd dirc
+   cat > a.txt
+   cat > b.txt
+   cat > c.txt
+   cd ..
+
+	cp dirc dira
+  
+
+B)Move Directory b to c.
+	
+->	mv dirb dirc
+
+C)Create alias of ls -lh command to your name.
+
+->	alias akash = "ls -lh"
+
+D)Change Directory name a to cdac.
+
+->	mv dira dircdac
+
+=============================================================================================================================================================
+
+Q3. 
+
+A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and file5.txt with some text inside it. 
+Search for 's' character inside all the files using grep command. Also Use cat to view all file content together.
+	
+=>	cat > file1.txt
+	cat > file2.txt
+	cat > file3.txt
+	cat > file4.txt
+	cat > file5.txt
+	grep 's' file?.txt
+	cat f*
+	
+B)Create file.txt using cat and edit that using nano editor.
+	
+->	nano file.txt
+	
+c)Create 5 empty files using touch command
+	
+->	touch 1.txt 2.txt 3.txt 4.txt 5.txt
+	
+D)Remove previously created directory a , b and c.
+
+->	rm -r dira dirb dirc	
+
+/////////////////////////////////////////////////////////////////////----------***********----------\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Q4. Create a file with some content using vi editor
+
+vi f1.sh 
+	
+a) Display the file using cat command.
+	
+->cat f1.sh	
+	
+b) Display line numbers along with content
+
+->cat -n f1.sh
+
+c) Display the file in reverse order using tac
+
+-> tac file1.txt file2.txt file3.txt file4.txt file5.txt
+
+d) Combine multiple files using cat command
+ 
+->cat file1.txt file2.txt > mergedfile.txt
+
+/////////////////////////////////////////////////////////////////////----------***********----------\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Q5. Create Random some files and sub directories.
+	
+a) display files row wise, column wise, 1 per row
+	
+=>	cat > col.txt
+	a
+	b
+	c
+	d
+	cat col.txt
+	column col.txt	
+	
+b) sort the files in ascending, descending order
+	
+=> sort name.txt
+   sort -r name.txt		
+	
+c) Create some hidden files and sub directories and display them using “ls -a”
+
+=>cat > .h2.txt
+  mkdir .h2
+  ls -a
+
+d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+
+=>touch -a a.txt
+  touch -c -d a.txt
+
+e) Recursive display contents of your home directory.
+	
+=>ls -r	
+	
+f) display all attributes of files and directories using ls -l
+	
+=>ls -l	
+	
+g) display attributes of a directory using ls -ld
+
+=>ls -ld dira
+
+/////////////////////////////////////////////////////////////////////----------***********----------\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt
+		b)user can write the file c.txt
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+
+=>mkdir akash
+  cd akash
+  touch a.txt b.txt c.txt d.sh
+  chmod 110 a.txt b.txt
+  chmod 010 c.txt
+  chmod 001 d.sh
+ 
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+
+=> chmod 001 akash
+
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+
+=> chmod 100 akash
+
+Q4. Use echo to list the all files of your home directory.
+
+=> echo *
+
+Q5. Use echo to list the all files of /etc/ directory
+
+=> cd /etc
+   echo *
+
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+
+=>cd /etc
+  echo *.conf
+
+Q7. Use echo to append your name to a.txt
+
+=> echo 'append successfull'>>a.txt
+
+/////////////////////////////////////////////////////////////////////----------***********----------\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Note:Many operation might not work.Analyze them
+1.	Create Three level nested directory a,b and c
+
+-> mkdir dira dirb dirc
+	mv dirb dirc dira
+	mv dirc dirb
+	
+
+a)Create at least one hidden file in each directory
+
+-> cd dira
+cat > .h1.txt
+
+cd dirb
+cat > .h2.txt
+
+cd dirc
+cat > .h3.txt
+
+b)Create at least one normal text file in each directory
+
+->cat > a.txt
+  cat > b.txt
+  cat > c.txt
+
+c)Copy c into a
+
+->cp -r ../dira/dirb/dirc ../dira
+
+d)Copy file inside a into b
+
+->cp -r location of source location of destination
+
+
+2.Change the third level directory c permission to read only.
+
+->chmod 100 dirc	
+
+3.Try copying third level c directory to outside of a
+
+->cp -r location of source location of destination	
+
+4.Create the directory  “data“ inside b
+
+->mkdir data
+
+5.Change the permission of b to read and write only
+
+->chmod 110 dirb
+
+6.Create directory “data2”  inside b
+
+->mkdir data2
+
+7.Create data.txt file inside b
+
+->touch data.txt
+
+8.Rename the second level directory c to copied_dir
+
+->mv dirc copied_dir
+
+9.Change permission of copied_dir to only executable
+
+->chmod 001 copied_dir
+
+10.Try ls on copied_dir
+
+->ls
+
+11.Try moving copied_dir to outside of a
+
+->mv ../copied_dir destination location
+
+12.Try moving data directory outside of a
+
+->mv source destination location
+
+14.Change permission of a to read write and executable to only user
+
+->chmod 700 dira
+
+15.Try creating directory sample inside a
+
+->mkdir sample
+
+16.Create directory x outside a
+
+->mkdir x
+
+17.Try moving x inside a
+
+->mv x ../a
+
+18.Create directory movies
+
+->mkdir movies
+
+19.Change group of movies to sudo
+
+->chgrp sudo movies
+
+20.Change group of movies to avahi
+
+->chgrp avahi movies
+
+21.Try changing permission after changing ownership to root
+
+->chmod 777 avahi
+
+22.Try Changing permission after changing group to sudo without sudo
+->chmod 777 sudo
+
+23.Try Changing owner and group both to root
+
+->chown bin akash
+  chgrp bin akash 
+
+24.Try changinging permission
+
+->chmod 777 filename
+
+25.Try deleting the file
+
+->rm -r filena
