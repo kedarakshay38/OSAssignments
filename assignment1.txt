@@ -83,7 +83,7 @@ B)Move Directory b to c.
 
 C)Create alias of ls -lh command to your name.
 
-->	alias akash = "ls -lh"
+->	alias Akshay = "ls -lh"
 
 D)Change Directory name a to cdac.
 
